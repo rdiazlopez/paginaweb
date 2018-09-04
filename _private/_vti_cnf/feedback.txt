@@ -1,0 +1,12 @@
+vti_encoding:SR|utf8-nl
+vti_timelastmodified:TR|11 May 2009 17:33:13 -0000
+vti_extenderversion:SR|5.0.2.6417
+vti_nosourcecontrol:SR|True
+vti_author:SR|PC-RODRIGO\\Rodrigo
+vti_modifiedby:SR|PC-RODRIGO\\Rodrigo
+vti_nexttolasttimemodified:TR|11 May 2009 17:33:13 -0000
+vti_timecreated:TR|11 May 2009 17:33:13 -0000
+vti_lineageid:SR|{1667B3BA-876F-46A1-8677-10B2C78C8F76}
+vti_cacheddtm:TX|11 May 2009 17:33:13 -0000
+vti_filesize:IR|0
+vti_backlinkinfo:VX|
