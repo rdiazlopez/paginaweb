@@ -1,0 +1,724 @@
+<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
+<html>
+<head>
+	<title>La llegada del tercer milenio</title>
+
+	<META http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+	<META name="generator" content="Microsoft FrontPage 5.0">
+	<META name="keywords" lang="es" content="Siglo XXI, Tercer Milenio, 2001">
+	<META name="description" content="La llegada del tercer milenio">
+	<META name="resource-type" content="document">
+	<META name="revisit-after" content="15 days">
+	<META name="classification" content="Internet">
+	<META name="robots" content="ALL">
+	<META name="distribution" content="Global">
+	<META name="rating" content="General">
+	<META name="copyright" content="&copy; www.rodrigodiaz.com">
+	<META name="author" content="Rodrigo D&iacute;az L&oacute;pez">
+	<META name="language" content="es">
+	<META name="doc-type" content="Public">
+	<META name="doc-class" content="Completed">
+	<META name="doc-rights" content="Rodrigo D&iacute;az L&oacute;pez">
+	<META name="doc-publisher" content="Rodrigo D&iacute;az L&oacute;pez">
+
+<script LANGUAGE ="JavaScript">
+function EsBisiesto (ano)
+{
+  if (ano % 4 == 0)
+  {
+    if (ano % 100 == 0)
+    {
+      if (ano % 400 == 0)
+        return true;
+      else 
+        return false;
+    }
+    else
+      return true;
+  }
+  else
+    return false;
+}
+
+function DiasFinMilenio ()
+{
+  Dias_Mes = new Object(12);
+  Dias_Mes[0] = 31;
+  Dias_Mes[1] = 28;
+  Dias_Mes[2] = 31;
+  Dias_Mes[3] = 30;
+  Dias_Mes[4] = 31;
+  Dias_Mes[5] = 30;
+  Dias_Mes[6] = 31;
+  Dias_Mes[7] = 31;
+  Dias_Mes[8] = 30;
+  Dias_Mes[9] = 31;
+  Dias_Mes[10] = 30;
+  Dias_Mes[11] = 31;
+
+  Hoy = new Date();
+  var dia;
+  dia = Hoy.getDate();
+  var mes;
+  mes = Hoy.getMonth()
+  var ano;
+  ano = Hoy.getYear();
+
+  if (ano >= 50) 
+  {
+    if (ano < 150)
+      ano = ano + 1900;
+  }
+  else
+    ano = ano + 2000;
+
+  if (ano >= 2001)
+    return 0;
+
+  var total;
+  total = Dias_Mes[mes] - dia + 1;
+
+  if ((EsBisiesto (ano) == true) && (mes <= 1))
+    total++;
+
+  var i;
+  for (i = mes + 1; i <= 11; i++)
+  {
+    total = total + Dias_Mes[i];
+  }
+
+  for (i = ano + 1; i <= 2000; i++)
+  {
+    if (EsBisiesto (i) == true)
+      total = total + 366;
+    else
+      total = total + 365;
+  }
+
+  return total;
+}
+
+function SegundosFinSiglo()
+{
+    var  dh = new Date();
+    var  df = new Date(2001,0,1,00,00,00);
+    var seg = (df.getTime()  -  dh.getTime()) / 1000;
+    var ano,dia,hor,min;
+    seg -= seg%1;
+
+    ano = Math.floor(seg/(365*24*60*60));
+    seg -=  (365*24*60*60)*ano;
+
+    dia = Math.floor(seg/(24*60*60));
+    seg -=  (24*60*60)*dia;
+    dia =dia+ano*365;
+
+    hor = Math.floor(seg/(60*60));
+    seg -=  (60*60)*hor;
+
+    min = Math.floor(seg/60);
+    seg -=  60*min;
+
+    document.MARCO.MSG.value =" Faltan "
+                               + dia + " dias, "
+                               + hor + " horas, "
+                               + min + " minutos y "
+                               + seg+  " segundos "
+                               + "para el siglo XXI" ;
+    window.setTimeout("SegundosFinSiglo()",500);
+}
+
+function SegundosSigloXXI()
+{
+    var  dh = new Date();
+    var  df = new Date(2001,0,1,00,00,00);
+    var seg = (dh.getTime()  -  df.getTime()) / 1000;
+    var ano,dia,hor,min;
+    seg -= seg%1;
+
+    ano = Math.floor(seg/(365*24*60*60));
+    seg -=  (365*24*60*60)*ano;
+
+    dia = Math.floor(seg/(24*60*60));
+    seg -=  (24*60*60)*dia;
+    dia =dia+ano*365;
+
+    hor = Math.floor(seg/(60*60));
+    seg -=  (60*60)*hor;
+
+    min = Math.floor(seg/60);
+    seg -=  60*min;
+
+    document.MARCO.MSG.value =" Llevamos "
+                               + dia + " dias, "
+                               + hor + " horas, "
+                               + min + " minutos y "
+                               + seg+  " segundos "
+                               + "de siglo XXI" ;
+    window.setTimeout("SegundosSigloXXI()",500);
+}
+    </script>
+</head>
+<body link="#0000EE" vlink="#551A8B" alink="#EE0000" background="images/telefond.gif" ONLOAD="window.setTimeout('SegundosSigloXXI()',500);">
+
+<center><script type="text/javascript"><!--
+google_ad_client = "pub-6407928128825663";
+google_ad_width = 728;
+google_ad_height = 90;
+google_ad_format = "728x90_as";
+google_ad_type = "text_image";
+google_ad_channel ="8156824434";
+google_page_url = document.location;
+google_color_border = "336699";
+google_color_bg = "FFFFFF";
+google_color_link = "0000FF";
+google_color_url = "008000";
+google_color_text = "000000";
+//--></script>
+<script type="text/javascript"
+  src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+
+<center><font color="#00ACB0"><font size=+4>La llegada del tercer milenio</font></font></center>
+<!--zzzzzzzzzzzzzz
+<SCRIPT LANGUAGE ="JavaScript">
+  var MiCadena = "<CENTER>Faltan " + DiasFinMilenio() + " d&iacute;as para el 1 de enero del a&ntilde;o 2001.<BR></CENTER>"
+  document.write(MiCadena.big());
+</SCRIPT>
+//zzzzzzzzzzzz-->
+<center><form NAME="MARCO"><input TYPE="text"   NAME="MSG"  SIZE=70></form></center>
+
+<p><font color="#000000"><font size=+1>&nbsp;&nbsp;&nbsp; Ahora s&iacute;. Ya est&aacute; aqu&iacute;. Ya lleg&oacute; el siglo XXI, y con &eacute;l el tercer milenio de la Era Cristiana. A pesar de que muchos medios de comunicaci&oacute;n cometieron el error de afirmar que el siglo XXI comenz&oacute; el a&ntilde;o 2000, el siglo XXI comenz&oacute;, como no pod&iacute;a ser de otra manera, el 1 de enero del a&ntilde;o 2001.</font></font>
+
+<p><font color="#000000"><font size=+1>&nbsp;&nbsp;&nbsp; Si Jesucristo hubiera nacido el 1 de enero del a&ntilde;o 1, hubiera cumplido 2000 a&ntilde;os el 1 de enero de 2001.</font></font>
+
+<p><font color="#000000"><font size=+1>&nbsp;&nbsp;&nbsp; Y &eacute;l que m&aacute;s hizo en Espa&ntilde;a por despejar las dudas existentes, fue sin duda el Rey Juan Carlos I. Lo dej&oacute; bien claro, "el siglo XXI empieza el 2001 y no en el a&ntilde;o 2000". As&iacute;
+puntualiz&oacute; el Rey al Presidente del CGPJ, Javier Delgado, durante
+la apertura del a&ntilde;o judicial 1999-2000. Javier Delgado hab&iacute;a
+hecho una alusi&oacute;n a que este curso "nos lleva al siglo XXI". Don
+Juan Carlos se dirigi&oacute; al magistrado y en tono afable le advirti&oacute;
+de que "el siglo XXI empieza el 2001".</font></font>
+
+<p align="center"><font color="#000000"><font size=+1>&nbsp;&nbsp;&nbsp; <a href="carta.htm">Carta publicada en la revista Muy Interesante</a></font></font>
+
+<p align="center"><font face="Arial, Helvetica, sans-serif" size="2" color="#6699FF"><b><a href="http://manifiesto2000.astrored.org" target="_top" ONMOUSEOVER="window.status='Manifiesto 2000';return true" 
+ONMOUSEOUT="window.status='';return true"><img src="images/m2000.gif" width="88" height="31" alt="Manifiesto 2000" border="0"></a></b></font></p>
+
+<p><font color="#000000"><font size=+1>&nbsp;&nbsp;&nbsp; <a href="#Historia">Historia
+del calendario cristiano</a></font></font>
+<p><font color="#000000"><font size=+1>&nbsp;&nbsp;&nbsp; <a href="#AnnoDomini">&iquest;Porqu&eacute;
+no existe un a&ntilde;o cero?</a></font></font>
+<p><font color="#000000"><font size=+1>&nbsp;&nbsp;&nbsp; <a href="#Antecedentes">Opini&oacute;n
+de instituciones y personalidades</a></font></font>
+<p><font color="#000000"><font size=+1>&nbsp;&nbsp;&nbsp; <a href="#Curiosidades">Curiosidades
+relacionadas con el cambio de milenio</a></font></font>
+<p><font color="#000000"><font size=+1>&nbsp;&nbsp;&nbsp; <a href="#Enlaces">Enlaces
+de inter&eacute;s</a></font></font>
+<!--
+<p><font color="#000000"><font size=+1>&nbsp;&nbsp;&nbsp; <a href="#Bibliografia">Bibliograf&iacute;a</a></font></font>
+-->
+<br><a NAME="Historia"></a>
+<p><font color="#000000"><font size=+3>Historia del calendario cristiano</font></font>
+<p><font color="#000000"><font size=+1>&nbsp;&nbsp;&nbsp; Hasta bien entrado
+el siglo IX, la iglesia de Roma estimaba los a&ntilde;os transcurridos
+de acuerdo con la costumbre que proven&iacute;a del Imperio Romano, desde
+la fundaci&oacute;n de Roma (ab urbe condita). Sin embargo a partir del
+mandato de Diocleciano (283-313) se comenzaron a contar los a&ntilde;os,
+no desde la fundaci&oacute;n de Roma, sino desde el comienzo de su gobierno:
+la era diocleciana.</font></font>
+<p><font color="#000000"><font size=+1>&nbsp;&nbsp;&nbsp; Para los cristianos
+era muy importante determinar con absoluta exactitud la celebraci&oacute;n
+de la fecha de la Pascua. Pero esto no era f&aacute;cil, ya que ten&iacute;an
+que coincidir los c&aacute;lculos del calendario jud&iacute;o con los del
+romano (o juliano). De hecho, las dos sedes m&aacute;s importantes de la
+cristiandad de aquellos tiempos, Roma y Alejandr&iacute;a, discrepaban
+en la fecha de su celebraci&oacute;n.</font></font>
+<p><font color="#000000"><font size=+1>&nbsp;&nbsp;&nbsp; En el a&ntilde;o
+526 la diferencia era ya considerable, pues las desigualdades en el c&oacute;mputo
+se hab&iacute;an acumulado durante muchos a&ntilde;os. Con objeto de evitar
+que la pascua fuera festejada en dos fechas distintas, el Papa Juan I encarg&oacute;
+a Dionisio el Exiguo (470-550) que hiciera los estudios necesarios para
+tomar una decisi&oacute;n definitiva. Este monje escita, que resid&iacute;a
+en Roma, era famoso por su erudici&oacute;n. Dionisio el Exiguo, elabor&oacute;
+una tabla de fiestas de Pascua valederas para 95 a&ntilde;os, que entrar&iacute;a
+en vigor despu&eacute;s de que acabaran -en el 531- otras que elabor&oacute;
+el obispo Cirilo de Alejandr&iacute;a. Ahora bien, el patriarca Cirilo
+hab&iacute;a confeccionado sus fechas de Pascua utilizando como inicio
+del c&aacute;lculo la era de Diocleciano. Esto puso furioso a Dionisio
+el Exiguo, ya que este emperador se hab&iacute;a convertido al final de
+su gobierno en un implacable perseguidor de los cristianos. Cierto d&iacute;a,
+tuvo una ocurrencia que le pareci&oacute; absolutamente feliz: &iquest;porqu&eacute;
+hab&iacute;a de contar los a&ntilde;os a partir de un emperador pagano,
+cruel asesino de creyentes? &iquest;Porqu&eacute; no hacerlo comenzando
+por el momento en que Jes&uacute;s, el Salvador, hab&iacute;a iniciado
+su vida terrena?</font></font>
+<p><font color="#000000"><font size=+1>&nbsp;&nbsp;&nbsp; En su obra <i>Sobre
+la Pascua</i> escribi&oacute; as&iacute;:</font></font>
+<ul><font color="#000000"><font size=+1>"No hemos querido ligar el c&oacute;mputo
+de nuestros ciclos con la memoria de un perseguidor imp&iacute;o de la
+Iglesia; m&aacute;s bien hemos elegido designar la numeraci&oacute;n de
+los a&ntilde;os a partir de la fecha de encarnaci&oacute;n de Nuestro Se&ntilde;or
+Jesucristo".</font></font></ul>
+<font color="#000000"><font size=+1>&nbsp;&nbsp;&nbsp; La idea le pareci&oacute;
+muy acertada. Dionisio tom&oacute; como d&iacute;a del nacimiento de Jes&uacute;s
+el 25 de diciembre, fij&aacute;ndose en una tradici&oacute;n firmemente
+arraigada en su &eacute;poca, aunque esta fecha se hab&iacute;a establecido
+artificialmente tan s&oacute;lo tres siglos antes, de manera que coincidiese
+con la del dios Mitra. As&iacute; se obligaba a las gentes reci&eacute;n
+convertidas a olvidarse del dios pagano y a celebrar en ese d&iacute;a
+la encarnaci&oacute;n del Hijo de Dios. Pero esa es otra historia...</font></font>
+
+<p><font color="#000000"><font size=+1>&nbsp;&nbsp;&nbsp; Por medio del
+estudio de una tabla en la que aparecer&iacute;an los emperadores romanos desde adelante hacia atr&aacute;s, y contando los a&ntilde;os que hab&iacute;an gobernado cada uno de ellos, Dionisio fij&oacute;
+la fecha del nacimiento del Salvador en la nochebuena del a&ntilde;o 753 "ab urbe condita" (desde la fundaci&oacute;n de Roma). Seg&uacute;n la tradici&oacute;n religiosa jud&iacute;a, un var&oacute;n jud&iacute;o no es nombrado ni considerado como parte de la congregaci&oacute;n hasta haber sido circuncidado, el octavo d&iacute;a despu&eacute;s de su nacimiento, as&iacute; que el 1 de enero del a&ntilde;o 754 AUC ser&iacute;a el primer d&iacute;a del primer a&ntilde;o de la Era Cristiana.</font></font>
+
+<p><i><font color="#000000"><font size=+1>&nbsp;&nbsp;&nbsp; Nota: Hay que 
+mencionar que, en los tiempos de Dionisio el Exiguo, el a&ntilde;o 
+eclesi&aacute;stico comenzaba el 25 de diciembre, precisamente como 
+homenaje a la supuesta fecha del nacimiento de Cristo, y no el 1 de 
+enero como sucede ahora. De hecho esto fue as&iacute; para la Iglesia 
+Romana hasta el a&ntilde;o 1691.</font></font></i> 
+
+<p><font color="#000000"><font size=+1>&nbsp;&nbsp;&nbsp; Pero Dionisio se 
+equivoc&oacute; en sus c&aacute;lculos. El evangelio
+de san Mateo (2,1), nos dice que Jesucristo vino al mundo durante el reinado
+de Herodes el Grande y que &eacute;ste tard&oacute; cierto tiempo -probablemente
+algo menos de 2 a&ntilde;os- en tomar la decisi&oacute;n de acabar con
+todos los ni&ntilde;os de Bel&eacute;n para eliminar a un posible pretendiente
+al trono (Mateo 2,16). Y ah&iacute; reside su error, ya que Herodes el
+Grande muri&oacute; en el 750 AUC; por lo tanto, Cristo debi&oacute; nacer
+en el 748 AUC o 749 AUC, uno o dos a&ntilde;os antes.</font></font> 
+
+<p><font color="#000000"><font size=+1>&nbsp;&nbsp;&nbsp; El sistema de Dionisio 
+funcionaba pero &eacute;ste no tuvo en cuenta que Augusto C&eacute;sar gobern&oacute; 
+con su verdadero nombre, Octavio, durante cuatro a&ntilde;os.
+As&iacute;, seg&uacute;n el sistema de Dionisio, la fecha de la Natividad ser&iacute;a 
+el 749 AUC. Esta hip&oacute;tesis es corroborada por algunos investigadores, entre 
+los que se encuentra Mark Kidger del Instituto de Astrof&iacute;sica de Canarias, que tomando 
+como base la aparici&oacute;n de una nova (<a href="http://www.arrakis.es/~nautylus/belen.htm" target="_top">la Estrella de Bel&eacute;n</a>) el a&ntilde;o 
+749 AUC (5 a.C.) creen posible la determinaci&oacute;n de &eacute;ste como el a&ntilde;o en que 
+naci&oacute; Jes&uacute;s. El caso es que este error de cuatro a&ntilde;os perdura hasta hoy. Pero esa es otra historia...</font></font>
+
+<p><font color="#000000"><font size=+1>&nbsp;&nbsp;&nbsp; Dionisio, no
+se percat&oacute; de su equivocaci&oacute;n y entreg&oacute; los resultados
+al Papa en el a&ntilde;o 526. La difusi&oacute;n de su obra <i>Sobre la
+Pascua</i> comenz&oacute; a extender entre las gentes la nueva manera de
+calcular el tiempo a partir de la fecha del nacimiento de Jes&uacute;s.
+&Eacute;sta no se impuso de inmediato, ya que se difundi&oacute; de un
+modo lento y extraoficial, hasta que en el 644 fue aceptada por la Iglesia
+de Inglaterra. La Iglesia de Francia la asumi&oacute; en el 742, y m&aacute;s
+tarde lo hicieron las Iglesias de Hispania e Italia. En Roma se sigui&oacute;
+utilizando hasta el siglo IX el sistema romano tard&iacute;o de la indicci&oacute;n
+introducido por Constantino en el 312.</font></font>
+
+<p><font color="#000000"><font size=+1>&nbsp;&nbsp;&nbsp; El a&ntilde;o 
+juliano era 11 minutos y 14 segundos m&aacute;s largo que el a&ntilde;o solar.
+Esta diferencia se acumul&oacute; hasta que hacia 1582 el equinoccio de
+primavera se produjo 10 d&iacute;as antes y las fiestas de la iglesia no ten&iacute;an
+lugar en las estaciones apropiadas. Para conseguir que el equinoccio de
+primavera se produjera hacia el 21 de marzo, como ocurri&oacute; en el 325
+d.C., a&ntilde;o del primer Concilio de Nicea, el papa Gregorio XIII promulg&oacute;
+un decreto eliminando 10 d&iacute;as del calendario. Para prevenir nuevos
+desplazamientos instituy&oacute; un calendario, conocido como calendario
+gregoriano, que estipulaba que los a&ntilde;os centenarios divisibles por 400 deb&iacute;an ser a&ntilde;os bisiestos y que todos los dem&aacute;s a&ntilde;os centenarios deb&iacute;an ser a&ntilde;os normales. Por ejemplo, 1600 y 2000 fueron a&ntilde;os bisiestos, pero 1700, 1800 y 1900 no lo fueron. El calendario gregoriano recibe tambi&eacute;n el nombre de cristiano, porque emplea el nacimiento de Cristo como punto de partida. Las fechas de la Era Cristiana son designadas a menudo con las abreviaturas d.C. (despu&eacute;s de Cristo) y a.C. (antes de Cristo).</font></font>
+
+<p><font color="#000000"><font size=+1>&nbsp;&nbsp;&nbsp; El calendario 
+gregoriano se fue adoptando lentamente en toda Europa. Hoy
+est&aacute; vigente en casi todo el mundo occidental y en partes de Asia. La
+Uni&oacute;n Sovi&eacute;tica adopt&oacute; el calendario gregoriano en 1918, y Grecia lo
+adopt&oacute; en 1923 por motivos administrativos, aunque muchos pa&iacute;ses de
+religi&oacute;n cristiana oriental conservaron el calendario juliano para la
+celebraci&oacute;n de las fiestas de la iglesia.
+</font></font>
+
+
+<br><a NAME="AnnoDomini"></a>
+<p><font color="#000000"><font size=+3>&iquest;Porqu&eacute; no existe
+un a&ntilde;o cero?</font></font>
+<p><font color="#000000"><font size=+1>&nbsp;&nbsp;&nbsp; Cuando Dionisio
+el Exiguo propuso iniciar el calendario a partir del nacimiento de Cristo,
+no incluy&oacute; en este sistema el a&ntilde;o cero. Es decir que el a&ntilde;o
+anterior al a&ntilde;o 1 de la Era Cristiana (1 d.C.) fue el a&ntilde;o 1 antes de 
+Cristo (1 a.C.). De este modo el siglo I de la Era Cristiana comenz&oacute;
+con el a&ntilde;o 1 y concluy&oacute; el 31 de diciembre del a&ntilde;o
+100 comprendiendo exactamente 100 a&ntilde;os completos (1, 2, 3, ...,
+100), y el siglo II comenz&oacute; el 1 de enero del 101. Asimismo el siglo
+I antes de Cristo comprendi&oacute; los a&ntilde;os 1 a.C., 2 a.C., 3 a.C., hasta
+el 100 a.C. (otros 100 a&ntilde;os completos).</font></font>
+<p><font color="#000000"><font size=+1>&nbsp;&nbsp;&nbsp; Dionisio el Exiguo
+no incluy&oacute; un a&ntilde;o cero sencillamente porque el concepto de
+cero no exist&iacute;a en su &eacute;poca. El n&uacute;mero cero fue introducido
+en Europa en el siglo IX por los &aacute;rabes, que lo hab&iacute;an tomado
+a su vez del sistema indio. Pero aunque Dionisio hubiera incluido un a&ntilde;o
+cero (que no lo hizo), &iquest;a qu&eacute; siglo pertenecer&iacute;a este
+a&ntilde;o, al siglo I antes de Cristo, al siglo I despu&eacute;s de Cristo,
+o a los dos a la vez? De haberlo hecho, posiblemente habr&iacute;a provocado
+a&uacute;n m&aacute;s confusi&oacute;n. Adem&aacute;s, teniendo en cuenta
+que el tiempo es una magnitud continua, no tendr&iacute;a sentido hablar
+de un a&ntilde;o cero sino de un <i>instante cero</i>, el paso del a&ntilde;o
+1 a.C. al a&ntilde;o 1 d.C., es decir las 00:00 horas del 1 de enero del a&ntilde;o
+1 d.C.</font></font>
+<p><font color="#000000"><font size=+1>&nbsp;&nbsp;&nbsp; De este modo,
+el primer a&ntilde;o no terminar&iacute;a hasta el final del d&iacute;a
+31 de diciembre del a&ntilde;o 1 cuando transcurriera un a&ntilde;o completo
+desde el <i>instante cero</i>. La primera d&eacute;cada no terminar&iacute;a
+hasta el final del d&iacute;a 31 de diciembre del a&ntilde;o 10 cuando
+transcurrieran diez a&ntilde;os completos desde el <i>instante cero</i>.
+El primer siglo no terminar&iacute;a hasta el final del d&iacute;a 31 de
+diciembre del a&ntilde;o 100 cuando transcurrieran cien a&ntilde;os completos
+desde el <i>instante cero</i>. El primer milenio no terminar&iacute;a hasta
+el final del d&iacute;a 31 de diciembre del a&ntilde;o 1000 cuando transcurrieran
+mil a&ntilde;os completos desde el <i>instante cero</i>. El segundo milenio
+no terminar&iacute;a hasta el final del d&iacute;a 31 de diciembre del
+a&ntilde;o 2000 cuando transcurrieran dos mil a&ntilde;os completos desde
+el <i>instante cero</i>. Y por fin, el tercer milenio (y por tanto el siglo
+XXI) dar&aacute; comienzo el 1 de enero del a&ntilde;o 2001.</font></font>
+<p><font color="#000000"><font size=+1>&nbsp;&nbsp;&nbsp; Esto no se basa
+en una opini&oacute;n, sino en unos hechos, y en una tradici&oacute;n que
+dura ya casi 1500 a&ntilde;os. Por tanto la nochevieja del a&ntilde;o 1999
+no se cambi&oacute;, ni de d&eacute;cada, ni de siglo, ni de milenio.
+Todo eso ocurri&oacute; el 31 de diciembre del a&ntilde;o 2000, aunque
+m&aacute;s de uno (incluso el actual Presidente de Gobierno) se empe&ntilde;&oacute;
+en decirnos lo contrario.</font></font>
+<p><font color="#000000"><font size=+1>&nbsp;&nbsp;&nbsp; La clave del
+asunto (y lo que indujo a error), es que se piensa que hubo un a&ntilde;o
+cero, cuando &eacute;ste realmente nunca existi&oacute;.</font></font>
+<br><a NAME="Antecedentes"></a>
+<p><font color="#000000"><font size=+3>Opini&oacute;n de instituciones
+y personalidades</font></font>
+<p><font color="#000000"><font size=+1>&nbsp;&nbsp;&nbsp; Con la colaboraci&oacute;n
+de:</font></font>
+<br><font size=+1><font color="#0080FF">Manuel Tamayo&nbsp;<img SRC="images/papel.gif" ALT="e-mail" BORDER=0 height=18 width=20 align=CENTER></font><font color="#000080"><a href="mailto:mtamayo@hualo.ucm.cl">mtamayo@hualo.ucm.cl</a></font></font>
+<br><font size=+1><font color="#0080FF">Joseba Urkiola&nbsp;<img SRC="images/papel.gif" ALT="e-mail" BORDER=0 height=18 width=20 align=CENTER></font><font color="#000080"><a href="mailto:jau@euskalnet.net">jau@euskalnet.net</a></font></font>
+<p><font color="#000000"><font size=+1>&nbsp;&nbsp;&nbsp; El 13 de septiembre
+de 1999, el <a href="pais.htm">Rey de Espa&ntilde;a</a> puntualiz&oacute;
+al Presidente del CGPJ, Javier Delgado, durante la apertura del a&ntilde;o
+judicial 1999-2000. Javier Delgado hab&iacute;a dicho "abris un a&ntilde;o
+judicial que nos lleva al siglo XXI". Don Juan Carlos se dirigi&oacute;
+al magistrado y en tono afable le advirti&oacute; de que "el siglo XXI
+empieza el 2001".</font></font>
+<p><font color="#000000"><font size=+1>&nbsp;&nbsp;&nbsp; Los astr&oacute;nomos
+del <a href="http://www.rog.nmm.ac.uk/leaflets/new_mill.html" target="_top">Observatorio
+Real de Greenwich</a> han hecho notar el error de celebrar el 2000 como
+inicio del nuevo siglo (Revista Vanidades 37 n&uacute;m. 3, 28 enero 1997),
+igual opini&oacute;n expres&oacute; en 1997 el Primer Ministro de Australia,
+John Howard. Posteriormente, Sir Arthur C. Clarke, el famoso autor de"2001
+Odisea del Espacio", envi&oacute; cartas de disgusto a los peri&oacute;dicos
+londinenses en las que ped&iacute;a que no se mencionara al 2000 como inicio
+del milenio. Ya en los a&ntilde;os previos al 1800 el mismo error con relaci&oacute;n
+al siglo pasado lo manifest&oacute; p&uacute;blicamente el connotado astr&oacute;nomo
+Camile Flammarion.</font></font>
+<p><font color="#000000"><font size=+1>&nbsp;&nbsp;&nbsp; El <a href="http://www.map.es/a2000/pg7020_178.htm" target="_top">Real
+Instituto y Observatorio de la Armada</a>, dependiente del Ministerio de
+Defensa y encargado de velar por la Hora Oficial de Espa&ntilde;a (conforme
+a lo establecido por el R.D. 1308/92 de 23 de octubre) ha se&ntilde;alado
+que el tercer milenio comenz&oacute; cuando la escala de tiempo
+elaborada en el Observatorio se&ntilde;al&oacute; las 0 h. 0 m. 0 s. del d&iacute;a
+1 de enero del a&ntilde;o 2001.</font></font>
+<p><font color="#000000"><font size=+1>&nbsp;&nbsp;&nbsp; El Comit&eacute;
+Redactor del Proyecto Euro-2000 defini&oacute;: "Siglo XXI: per&iacute;odo
+de tiempo transcurrido entre la 00:00.00 hora del 01 de enero del 2001
+y las 23:59.59 del 31 de diciembre del 2100. <a href="http://www.ine.es/htdocs/info/euro2000/glosario.htm" target="_top">(www.ine.es/htdocs/info/euro2000/glosario.htm)</a></font></font>
+<p><font color="#000000"><font size=+1>&nbsp;&nbsp;&nbsp; En su libro "Luces
+y sombras de la Iglesia que amo" el obispo de Mor&oacute;n, prov. de Buenos
+Aires reconoce que aunque la Iglesia celebrar&aacute; el Jubileo de manera
+muy solemne en el a&ntilde;o 2000, "todos sabemos que el Jubileo no empieza
+en el a&ntilde;o 2000, sino en el 2001..."</font></font>
+<p><font color="#000000"><font size=+1>&nbsp;&nbsp;&nbsp; El Presidente
+Bill Clinton reconoci&oacute; p&uacute;blicamente que las &uacute;ltimas olimpiadas
+del siglo XX fueron las de Sydney 2000 y no las de Atlanta 1996
+(El Nacional, Caracas, 22 julio 1997).</font></font>
+
+<p><font color="#000000"><font size=+1>&nbsp;&nbsp;&nbsp; En Espa&ntilde;a la prensa escrita se pronunci&oacute; sin lugar a dudas a favor del 2001 como fecha de inicio del tercer milenio:
+<br>
+<ul>EL PA&Iacute;S
+<br>
+2 de enero de 2001
+<br>
+Tres inmigrantes fueron de las primeras mujeres en dar a luz en 2001
+<br><br>
+"Las campanadas de fin de a&ntilde;o marcaron para decenas de madres mucho m&aacute;s que el nuevo milenio.
+En la madrugada del d&iacute;a 1 hubo varias mujeres para quienes dar a luz significa, adem&aacute;s de la alegr&iacute;a de la maternidad, el alivio de saber que sus hijos llegan a un mundo m&aacute;s despreocupado del que les hubiera tocado si ellas hubiesen permanecido en sus pa&iacute;ses de origen: son las madres inmigrantes, para cuyos peque&ntilde;os el milenio se abre con la bienvenida que les brinda Espa&ntilde;a. 
+<br>
+Seg&uacute;n los datos disponibles ayer, el primer beb&eacute; nacido en Espa&ntilde;a en el milenio se llama Paula y naci&oacute; en el hospital general de Catalunya de Sant Cugat del Vall&eacute;s (Barcelona) 30 segundos despu&eacute;s de que sonaran las campanadas."</ul></font></font>
+<br>
+<p><font color="#000000"><font size=+1><ul>LA RAZ&Oacute;N
+<br>
+Domingo 31 de diciembre de 2000 
+<br>
+El siglo que termina 
+<br>
+Por Luis Mar&iacute;a ANS&Oacute;N
+<br>
+Catedr&aacute;tico de la Real Academia Espa&ntilde;ola de la Lengua
+<br><br>
+"Ahora s&iacute;. El siglo XX terminar&aacute; esta noche cuando los portones de la Historia giren sobre sus goznes y dejen atr&aacute;s los cien a&ntilde;os m&aacute;s intensos que ha conocido la Humanidad..."</ul></font></font>
+<br>
+<p><font color="#000000"><font size=+1><ul>EL MUNDO
+<br>
+2 de enero de 2001
+<br>
+RADIOGRAF&Iacute;A SOCIOL&Oacute;GICA ANTE EL SIGLO XXI
+<br>
+FELIPE SAHAG&Uacute;N
+<br><br>
+"LOS ESPA&Ntilde;OLES DEL SIGLO XXI.- La mayor&iacute;a de los ciudadanos consultados por Sigma Dos, en un sondeo realizado para EL MUNDO, consideran que el siglo que acaba de comenzar traer&aacute; m&aacute;s igualdad entre el hombre y la mujer, pero tambi&eacute;n m&aacute;s racismo y menos religiosidad..."</ul></font></font>
+<br>
+<p><font color="#000000"><font size=+1>&nbsp;&nbsp;&nbsp; A principios
+del siglo XX zse plante&oacute; un problema similar. En su libro "Milenio"
+(Ed. Cr&iacute;tica, Barcelona, 1998, p&aacute;gina 114), Stephen Jay Gould,
+dice:</font></font>
+<ul><font color="#000000"><font size=+1>"En cualquier caso, 1901 gan&oacute;
+a 1900 de manera decisiva, en los dos foros que realmente importan. Pr&aacute;cticamente
+todas las celebraciones p&uacute;blicas importantes del nuevo siglo, en
+todo	 el mundo (e incluso en Alemania donde el k&aacute;iser Guillermo II 
+declar&oacute; finalizado el siglo XIX el 31 de diciembre de 1899), tuvieron 
+lugar entre el 31 de diciembre
+de 1900 y el 1 de enero de 1901. Adem&aacute;s, pr&aacute;cticamente todos
+los principales peri&oacute;dicos y revistas dieron la bienvenida oficial
+al nuevo siglo con su primer n&uacute;mero de enero de 1901. Hice un repaso
+de las principales fuentes y no pude encontrar ninguna excepci&oacute;n.
+"The Nineteenth Century", una importante publicaci&oacute;n peri&oacute;dica
+inglesa, cambi&oacute; su nombre por el de "The Nineteenth Century and
+After", pero solo con el n&uacute;mero de enero de 1901, en el que tambi&eacute;n
+aparec&iacute;a el nuevo logotipo con un Jano de dos caras, un viejo barbudo
+que miraba a la izquierda y hacia abajo, al siglo XIX, y un hermoso joven
+mirando hacia la derecha, los ojos un poco alzados, al siglo XX. Publicaciones
+tan fiables como "The Farmer's Amlanack" y "The Tribune Almanac" declararon
+que sus vol&uacute;menes para 1901 eran "el primer n&uacute;mero del siglo
+XX". El 31 de diciembre de 1899, un art&iacute;culo de "The New York Times"
+sobre el siglo XIX empezaba se&ntilde;alando: "Ma&ntilde;ana entramos en
+el &uacute;ltimo a&ntilde;o de un siglo marcado por un progreso en todo
+lo relativo al bienestar material y a la ilustraci&oacute;n de la humanidad
+que ha sido mayor que en toda la historia de la raza". El 1 de enero de
+1901 el titular principal proclamaba: "Entrada triunfante del siglo XX"
+y describ&iacute;a las festividades en la ciudad de Nueva York..."</font></font></ul>
+<font color="#000000"><font size=+1>&nbsp;&nbsp;&nbsp; En Espa&ntilde;a,
+la Revista "Alrededor del Mundo" publicaba este art&iacute;culo, titulado
+"El saludo al nuevo siglo", el 3 de enero de 1901.</font></font>
+<ul><font color="#000000"><font size=+1>"No creemos que en ning&uacute;n
+pa&iacute;s del mundo se haya recibido al nuevo siglo con tanta solemnidad
+y con ceremonias p&uacute;blicas tan grandes como en los Estados Unidos.</font></font>
+<br><font color="#000000"><font size=+1>Por de pronto, un solo comit&eacute;
+formado al efecto, hab&iacute;a organizado reuniones para esperar al siglo
+en 1.500 iglesias distintas y en otra porci&oacute;n de lugares p&uacute;blicos.</font></font>
+<br><font color="#000000"><font size=+1>En cada una de estas reuniones
+se habr&aacute;n leido mensajes de 43 jefes de Estado saludando al siglo
+XX y a Am&eacute;rica. La lista hab&iacute;a sido encabezada por Su Santidad
+Leon XIII, la reina Victoria, el Czar de Rusia, el emperador Guillermo
+de Alemania, el emperador Francisco Jos&eacute; de Austria, el presidente
+Mac-Kinley, el presidente Loubet de Francia, el sult&aacute;n de Turqu&iacute;a,
+etc. A la lectura de cada mensaje habr&aacute; precedido el himno nacional
+del pa&iacute;s del jefe de Estado, y adem&aacute;s desfilaban por el escenario
+&oacute; por en medio de la iglesia comparsas de 50 individuos vestidos
+con los trajes nacionales m&aacute;s pintorescos de cada uno de los pa&iacute;ses.</font></font>
+<br><font color="#000000"><font size=+1>Estas reuniones estaban convocadas
+para las diez de la noche, con objeto que durante ellas empezara el siglo
+XX y la reuni&oacute;n lo saludara.</font></font>
+<br><font color="#000000"><font size=+1>En el local llamado Jardines de
+Madison Square, de Nueva York, hab&iacute;a preparado un gran mitin de
+20.000 almas con el mismo objeto."</font></font>
+<p><font color="#000000"><font size=+1>Revista "Alrededor del Mundo"</font></font>
+<br><font color="#000000"><font size=+1>3 de enero de 1901</font></font></ul>
+<a NAME="Curiosidades"></a>
+<p><font color="#000000"><font size=+3>Curiosidades relacionadas con el
+cambio de milenio</font></font>
+<p><font color="#000000"><font size=+1>&nbsp;&nbsp;&nbsp; Debido a las
+diferencias horarias, los primeros en recibir cada nuevo d&iacute;a son
+los habitantes del Pac&iacute;fico Central. Existen dos pa&iacute;ses en
+el Pac&iacute;fico Central, Tonga y Fidji, que entablaron una "guerra
+comercial" por ser los primeros en recibir el nuevo siglo (y en recibir
+tambi&eacute;n la visita de los ingenuos turistas). La hora oficial de
+Tonga est&aacute; adelantada 13 horas con respecto a la del meridiano de
+Greenwich (GMT + 13), mientras que la hora oficial de Fidji est&aacute;
+adelantada s&oacute;lo 12 horas (GMT + 12). Pues bien, el gobierno de Fidji
+estuvo estudiando la posibilidad de adelantar en una hora m&aacute;s
+la hora oficial del pa&iacute;s (&iexcl;incre&iacute;ble!), con el objetivo
+de equipararse a Tonga y aprovecharse del "fil&oacute;n tur&iacute;stico". 
+S&oacute;lo abandonaron esta idea cuando Tonga contraatac&oacute;, y 
+amenaz&oacute; con adelantar otra hora m&aacute;s su hora oficial. 
+&iquest;Se habr&iacute;an enterado bien de cuando comenzaba el s. XXI?</font></font>
+
+<p><font color="#000000"><font size=+1>&nbsp;&nbsp;&nbsp; Existe una isla
+en Nueva Zelanda, concretamente la Isla Pitt en el archipi&eacute;lago
+de las Islas Chatham, que seg&uacute;n los astr&oacute;nomos ser&aacute;
+el primer lugar habitado en recibir la luz del sol el d&iacute;a 1 de enero
+del 2001 (realmente cualquier 1 de enero). El sol sale en Kahuitara Point
+(44&ordm; 16' S - 176&ordm; 9' W), en la Isla Pitt, a las 16:04 (UTC) del
+31 de diciembre (Hora Local 4:49 del 1 de enero). El archipi&eacute;lago de las Islas
+Chatham, cuenta con una hora oficial GMT + 12:45, y por tanto recibi&oacute;
+la llegada del nuevo siglo con 15 minutos de retraso respecto a Tonga,
+pero debido a su posici&oacute;n mucho m&aacute;s meridional recibi&oacute;
+los rayos del sol antes (durante el verano austral amanece antes en los
+puntos situados m&aacute;s al sur). Pues bien, los gobernantes de la isla 
+intentaron aprovechar el tir&oacute;n del "primer amanecer del s. XXI"
+para denunciar sus deficiencias en infraestructuras, fomentar el turismo
+en la zona y obtener un mejor trato por parte de las autoridades estatales.
+&iexcl;Estos no quer&iacute;an perder el tiempo!</font></font>
+
+<p><font color="#000000"><font size=+1>&nbsp;&nbsp;&nbsp; El 23 de Diciembre
+de 1994, la Rep&uacute;blica de Kiribati anunci&oacute; qu&eacute;; "Con
+efecto desde el 1 de enero de 1995, todas las islas de los Grupos Line
+y Phoenix dentro de la Rep&uacute;blica de Kiribati estar&aacute;n en la
+misma fecha que las islas del Grupo Gilberts dentro de la Rep&uacute;blica,
+mientras que sus horas se mantendr&aacute;n como son actualmente". Esta
+decisi&oacute;n, perfectamente razonable desde el punto de vista administrativo,
+pone un gran bulto hacia el Este en la L&iacute;nea de fecha Internacional.
+Tambi&eacute;n colocaba a una atol&oacute;n deshabitado denominado Caroline
+Island, desde entonces rebautizada Millennium Island, como un contenedor
+principal para ver el primer amanecer del milenio en tierra firme. Sin
+embargo, el Sol no sale all&iacute; hasta las 15:43 (UTC) del
+31 de diciembre (Hora Local 5:43 del 1 de enero), 29 minutos despu&eacute;s de que salga
+en la Ant&aacute;rtida. Adem&aacute;s, aunque Caroline
+Island se encuentra en aguas tropicales no es m&aacute;s accesible que
+la Ant&aacute;rtida, porque se trata de un atol&oacute;n de 22 peque&ntilde;os
+islotes de 11 km. de longitud protegido por un arrecife de coral poco profundo.
+La &uacute;nica forma de llegar all&iacute; es en un barco de
+poco calado o en hidroavi&oacute;n.</font></font>
+
+<p><font color="#000000"><font size=+1>&nbsp;&nbsp;&nbsp; Algunos restaurantes,
+como el de la <a href="http://www.tour-eiffel.fr/cgi-bin/applis/teiffel" target="_top">Tour
+Eiffel de Par&iacute;s</a>, organizaron fiestas (por supuesto con un coste
+astron&oacute;mico) para celebrar la despedida del milenio el 31 de diciembre
+de 1999. No s&eacute; que cara pondr&iacute;an sus clientes cuando descubrieron 
+que el cambio de milenio no se produjo esa noche.</font></font>
+<br><a NAME="Enlaces"></a>
+<p><font color="#000000"><font size=+3>Enlaces de inter&eacute;s</font></font>
+<br>&nbsp;
+<table BORDER=0 CELLPADDING=2 WIDTH="100%" >
+<tr>
+<td><a href="http://manifiesto2000.astrored.org" target="_top"><img SRC="images/bola.gif" BORDER=0 height=12 width=12></a> <b><font color="#000080"><a href="http://manifiesto2000.astrored.org" target="_top">Astrored</a></font></b></td>
+
+<td>Portal de astronom&iacute;a espa&ntilde;ol</td>
+</tr>
+
+<tr>
+<td><a href="http://www.geocities.com/CapeCanaveral/Galaxy/4224/" target="_top"><img SRC="images/bola.gif" BORDER=0 height=12 width=12></a> <b><font color="#000080"><a href="http://www.geocities.com/CapeCanaveral/Galaxy/4224/" target="_top">Sociedad
+Astron&oacute;mica Interamericana</a></font></b></td>
+
+<td>Divulgaci&oacute;n cient&iacute;fica sobre el inicio del milenio</td>
+</tr>
+
+<tr>
+<td><a href="http://www.map.es/a2000/pg7020_178.htm" target="_top"><img SRC="images/bola.gif" BORDER=0 height=12 width=12></a> <b><font color="#000080"><a href="http://www.map.es/a2000/pg7020_178.htm" target="_top">Real
+Instituto y Observatorio de la Armada</a></font></b></td>
+
+<td>Encargado de velar por la Hora Oficial de Espa&ntilde;a, habla sobre
+el comienzo del tercer milenio.</td>
+</tr>
+
+<tr>
+<td><a href="http://www.rog.nmm.ac.uk/leaflets/new_mill.html" target="_top"><img SRC="images/bola.gif" BORDER=0 height=12 width=12></a> <b><font color="#000080"><a href="http://www.rog.nmm.ac.uk/leaflets/new_mill.html" target="_top">Royal
+Greenwich Observatory (Ingl&eacute;s)</a></font></b></td>
+
+<td>Respuestas a todas sus preguntas acerca de "El Comienzo del Nuevo Milenio"</td>
+</tr>
+
+<tr>
+<td><a href="http://www.arval.org.ve/new_millsp.htm" target="_top"><img SRC="images/bola.gif" BORDER=0 height=12 width=12></a> <b><font color="#000080"><a href="http://www.arval.org.ve/new_millsp.htm" target="_top">Royal
+Greenwich Observatory</a></font></b></td>
+
+<td>Traducida al castellano</td>
+</tr>
+
+<tr>
+<td><a href="http://aa.usno.navy.mil/AA/faq/docs/millennium.html" target="_top"><img SRC="images/bola.gif" BORDER=0 height=12 width=12></a> <b><font color="#000080"><a href="http://aa.usno.navy.mil/AA/faq/docs/millennium.html" target="_top">U.S.
+Naval Observatory</a></font></b></td>
+
+<td>The 21st Century and the 3rd Millennium - When Will They Begin?</td>
+</tr>
+
+<tr>
+<td><a href="http://aa.usno.navy.mil/AA/faq/docs/first_sunrise.html" target="_top"><img SRC="images/bola.gif" BORDER=0 height=12 width=12></a> <b><font color="#000080"><a href="http://aa.usno.navy.mil/AA/faq/docs/first_sunrise.html" target="_top">U.S.
+Naval Observatory</a></font></b></td>
+
+<td>First Sunrise of the New Millennium</td>
+</tr>
+
+<tr>
+<td><a href="http://teleline.terra.es/personal/jdamian/menu.htm" target="_top"><img SRC="images/bola.gif" BORDER=0 height=12 width=12></a> <b><font color="#000080"><a href="http://teleline.terra.es/personal/jdamian/menu.htm" target="_top">P&aacute;gina
+personal de J. Damian</a></font></b></td>
+
+<td>Muy completa</td>
+</tr>
+
+<tr>
+<td><a href="http://teleline.terra.es/personal/iliuxxx/entrar.htm" target="_top"><img SRC="images/bola.gif" BORDER=0 height=12 width=12></a> <b><font color="#000080"><a href="http://teleline.terra.es/personal/iliuxxx/entrar.htm" target="_top">Falso
+milenio (P&aacute;gina personal)</a></font></b></td>
+
+<td>Clara y concisa</td>
+</tr>
+
+<tr>
+<td><a href="http://www.arrakis.es/~nautylus/belen.htm" target="_top"><img SRC="images/bola.gif" BORDER=0 height=12 width=12></a> <b><font color="#000080"><a href="http://www.arrakis.es/~nautylus/belen.htm" target="_top">La estrella de Bel&eacute;n (P&aacute;gina personal de Francisco Rodr&iacute;guez Bergali)</a></font></b></td>
+
+<td>P&aacute;gina que detalla el origen de la Navidad y sus tradiciones, los Reyes Magos, la estrella de Bel&eacute;n, etc.</td>
+</tr>
+
+<tr>
+<td><a href="http://teleline.terra.es/personal/iliuxxx/entrar.htm" target="_top"><img SRC="images/bola.gif" BORDER=0 height=12 width=12></a> <b><font color="#000080"><a href="http://teleline.terra.es/personal/iliuxxx/entrar.htm" target="_top">Tras la pista de los Reyes Magos y la Estrella de Bel&eacute;n (Art&iacute;culo de Astronom&iacute;a Digital)</a></font></b></td>
+
+<td>Art&iacute;culo que intenta explicar el verdadero origen de los Reyes Magos y de la estrella de Bel&eacute;n</td>
+</tr>
+
+</table>
+
+<p><a NAME="Bibliografia"></a>
+<!--
+<p><font color="#000000"><font size=+3>Bibliograf&iacute;a</font></font>
+<ul><font color="#000000"><font size=+1>Revista Muy Interesante</font></font>
+<br><font color="#000000"><font size=+1>N&uacute;mero: 55</font></font>
+<br><font color="#000000"><font size=+1>Mes: Diciembre</font></font>
+<br><font color="#000000"><font size=+1>A&ntilde;o: 1985</font></font>
+<br><font color="#000000"><font size=+1>P&aacute;gina: 37</font></font>
+<br><font color="#000000"><font size=+1>Secci&oacute;n: Preguntas</font></font>
+<br><font color="#000000"><font size=+1>T&iacute;tulo: &iquest;Cu&aacute;ndo
+comienza el siglo XXI?</font></font></ul>
+
+<ul><font color="#000000"><font size=+1>Revista Muy Interesante</font></font>
+<br><font color="#000000"><font size=+1>N&uacute;mero: 151</font></font>
+<br><font color="#000000"><font size=+1>Mes: Diciembre</font></font>
+<br><font color="#000000"><font size=+1>A&ntilde;o: 1993</font></font>
+<br><font color="#000000"><font size=+1>P&aacute;gina: 94</font></font>
+<br><font color="#000000"><font size=+1>T&iacute;tulo: Jes&uacute;s naci&oacute;
+antes de Cristo. Cronolog&iacute;a</font></font>
+<br><font color="#000000"><font size=+1>Autor: Antonio Pi&ntilde;ero</font></font></ul>
+-->
+
+<center><font size=+1><font color="#0080FF">Si se te ocurre alguna idea
+para completar esta p&aacute;gina, escribe a:&nbsp;<a href="mailto:rdiazlopez@hotmail.com?subject=Tercer milenio"><img SRC="images/papel.gif" ALT="e-mail" BORDER=0 height=18 width=20 align=CENTER></a></font><font color="#000080"> <a href="mailto:rdiazlopez@hotmail.com?subject=Tercer milenio">rdiazlopez@hotmail.com</a></font></font>
+<br>
+<br>
+<center>
+<script type="text/javascript"><!--
+google_ad_client = "pub-6407928128825663";
+google_ad_width = 728;
+google_ad_height = 90;
+google_ad_format = "728x90_as";
+google_ad_type = "text";
+google_ad_channel ="8156824434";
+google_page_url = document.location;
+google_color_border = "336699";
+google_color_bg = "FFFFFF";
+google_color_link = "0000FF";
+google_color_url = "008000";
+google_color_text = "000000";
+//--></script>
+<script type="text/javascript"
+  src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+
+<TABLE cellPadding=2 width="100%" border=0>
+  <TBODY>
+  <TR>
+    <TD align=right><a href="#TOP"> 
+    <IMG src="images/arriba.gif" align=center border=0 width="26" height="31"></a></TD></TR></TBODY></TABLE>
+    <CENTER>
+    <HR width="50%" SIZE=1>
+    <FONT color=#800000><FONT size=-1>Copyright © 2001-2005, Rodrigo Díaz López. Última modificación 01/01/2005&nbsp;</FONT></FONT>&nbsp;
+    <HR width="50%" SIZE=1>
+    </CENTER>
+    <CENTER><A href="main.htm">
+    <IMG src="images/home.gif" alt="Volver a la página inicial" align=center border=0 width="131" height="57"></A>
+    </CENTER>
+</CENTER>
